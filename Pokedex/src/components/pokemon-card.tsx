@@ -1,6 +1,7 @@
 import { PokemonItem } from "../models/Pokemon"
 import ColorThief from "colorthief";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,6 +27,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
     }, [pokemon.image])
 
     return (
+        
         <div className="pokemon-card" style={{ backgroundColor: bg}}>
             <img alt={pokemon.name} ref={imgRef} src={pokemon.image} crossOrigin="anonymous" />
             <h3>{pokemon.name}</h3>

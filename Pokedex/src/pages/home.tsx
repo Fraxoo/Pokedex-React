@@ -3,6 +3,7 @@ import Headers from "../components/headers"
 import PokemonCard from "../components/pokemon-card";
 import { PokemonItem } from "../models/Pokemon";
 import '../styles/home.css'
+import { Link } from "react-router-dom";
 
 
 
@@ -61,14 +62,16 @@ export default function Home() {
         <div>
             <Headers />
             <div className="pokemon-grid">
-            {
-                pokemons.map((pokemon) => {
-                    return (
-                        <PokemonCard key={pokemon.id} pokemon={pokemon}></PokemonCard>
-                    )
-                })
-            }
+                {
+                    pokemons.map((pokemon) => {
+                        return (
+                            <Link className="no-decoration" key={pokemon.id} to={`/pokemon/${pokemon.id}`}>
+                                <PokemonCard key={pokemon.id} pokemon={pokemon}></PokemonCard>
+                            </Link>
+                        )
+                    })
+                }
             </div>
-        </div>
+        </div >
     )
 }
