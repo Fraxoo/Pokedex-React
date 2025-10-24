@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Headers from "../components/headers"
 import PokemonCard from "../components/pokemon-card";
 import { PokemonItem } from "../models/Pokemon";
+import '../styles/home.css'
 
 
 

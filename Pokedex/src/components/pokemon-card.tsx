@@ -26,7 +26,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
     }, [pokemon.image])
 
     return (
-        <div className="pokemon-card" style={{ backgroundColor: bg, padding: "10px", borderRadius: 8 }}>
+        <div className="pokemon-card" style={{ backgroundColor: bg}}>
             <img alt={pokemon.name} ref={imgRef} src={pokemon.image} crossOrigin="anonymous" />
             <h3>{pokemon.name}</h3>
         </div>
