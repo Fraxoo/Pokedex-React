@@ -60,6 +60,7 @@ export default function Home() {
     return (
         <div>
             <Headers />
+            <div className="pokemon-grid">
             {
                 pokemons.map((pokemon) => {
                     return (
@@ -67,6 +68,7 @@ export default function Home() {
                     )
                 })
             }
+            </div>
         </div>
     )
 }
