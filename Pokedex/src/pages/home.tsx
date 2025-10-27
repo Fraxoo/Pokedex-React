@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Headers from "../components/headers"
 import PokemonCard from "../components/pokemon-card";
 import { PokemonItem } from "../models/PokemonItem";
 import '../styles/home.css'
@@ -12,7 +11,7 @@ export default function Home() {
     async function getAllPokemon() {
         try {
             const res = await fetch(
-                `https://pokebuildapi.fr/api/v1/pokemon/limit/100`,
+                `https://pokebuildapi.fr/api/v1/pokemon/limit/300`,
                 {
                     method: "GET",
                     headers: {
@@ -61,7 +60,6 @@ export default function Home() {
 
     return (
         <div className="home-container">
-            <Headers />
             <div className="pokemon-grid">
                 {
                     pokemons.map((pokemon) => {
