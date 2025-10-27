@@ -9,6 +9,14 @@ body {
 
 #root {
     height: 100vh;
+    overflow: hidden;
+}
+
+.pokemon-data-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 }
 
 .pokemon-data {

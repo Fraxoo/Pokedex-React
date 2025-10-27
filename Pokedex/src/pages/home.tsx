@@ -60,7 +60,7 @@ export default function Home() {
 
 
     return (
-        <div>
+        <div className="home-container">
             <Headers />
             <div className="pokemon-grid">
                 {

@@ -63,7 +63,10 @@ export default function Info() {
 
 
     return (
-        <PokemonData key={idNumber} pokemon={pokemon} />
+        <div className="pokemon-data-container">
+            <PokemonData key={idNumber} pokemon={pokemon} />
+
+        </div>
     )
 
 }
