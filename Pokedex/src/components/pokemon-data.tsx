@@ -26,16 +26,28 @@ export default function PokemonData({ pokemon }: PokemonDataProps) {
     }, [pokemon.image])
 
     useEffect(() => {
-        if(bg){
+        if (bg) {
             document.body.style.backgroundColor = bg;
         }
-    },[bg]);
+    }, [bg]);
 
     return (
-        
+
         <div className="pokemon-data">
-            <img alt={pokemon.name} ref={imgRef} src={pokemon.image} crossOrigin="anonymous" />
-            <h3>{pokemon.name}</h3>
+            <div className="pokemon-info">
+                <h3>{pokemon.id}</h3>
+            </div>
+            <div className="pokemon-img">
+
+            </div>
+            <div className="pokemon-stats">
+
+            </div>
         </div>
     );
 }
+
+
+
+{/* <img alt={pokemon.name} ref={imgRef} src={pokemon.image} crossOrigin="anonymous" />
+<h3>{pokemon.name}</h3> */}
