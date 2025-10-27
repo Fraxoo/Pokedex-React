@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "../styles/pokemon.css"
 import { PokemonItem } from "../models/Pokemon";
 import { useEffect, useState } from "react";
+import PokemonData from "../components/pokemon-data";
 
 
 export default function Info() {
@@ -22,7 +23,7 @@ export default function Info() {
                 console.log(data);
 
 
-                const pokemons = new PokemonItem(
+                const pokemon = new PokemonItem(
                     data.id,
                     data.name,
                     data.types,
@@ -33,7 +34,7 @@ export default function Info() {
                     data.stats.speed
                 );
 
-                setPokemon(pokemons)
+                setPokemon(pokemon)
             } else {
                 throw new Error("Erreur réseau : " + res.status);
             }
@@ -42,17 +43,16 @@ export default function Info() {
         }
     }
 
-    const [pokemon, setPokemon] = useState<PokemonItem>()
+    const [pokemon, setPokemon] = useState<PokemonItem | undefined>()
 
 
     const { id } = useParams();
     const idNumber = Number(id)
     console.log(id);
-    
+
 
     useEffect(() => {
         getPokemonByID(idNumber)
-
     }, [])
 
     useEffect(() => {
@@ -64,7 +64,8 @@ export default function Info() {
 
     return (
         <div>
-            <p>{id}</p>
+            {pokemon && <PokemonData key={idNumber} pokemon={pokemon} />}
         </div>
     )
+
 }

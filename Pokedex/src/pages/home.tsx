@@ -49,6 +49,7 @@ export default function Home() {
 
     useEffect(() => {
         getAllPokemon();
+        document.body.style.backgroundColor = "";
 
     }, [])
 
