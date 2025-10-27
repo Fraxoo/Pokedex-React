@@ -1,7 +1,7 @@
-import { PokemonItem } from "../models/Pokemon"
+import { PokemonItem } from "../models/PokemonItem"
 import ColorThief from "colorthief";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 
 

@@ -1,4 +1,4 @@
-import { PokemonItem } from "../models/Pokemon"
+import { PokemonItem } from "../models/PokemonItem"
 import ColorThief from "colorthief";
 import { useEffect, useRef, useState } from "react";
 
@@ -35,12 +35,27 @@ export default function PokemonData({ pokemon }: PokemonDataProps) {
 
         <div className="pokemon-data">
             <div className="pokemon-info">
-                <h3>{pokemon.id}</h3>
+                <h3>#{pokemon.id}</h3>
+                <h2>{pokemon.name}</h2>
             </div>
-            <div className="pokemon-img">
-
-            </div>
-            <div className="pokemon-stats">
+            <div className="pokemon-data-bottom">
+                <div className="pokemon-img">
+                    <img alt={pokemon.name} ref={imgRef} src={pokemon.image} crossOrigin="anonymous" />
+                </div>
+                <div className="pokemon-stats">
+                    <div className="pokemon-stats-types">
+                        {pokemon.types.map((type, i) => (
+                            <img key={i} src={type.image} alt={type.name} />
+                        ))}
+                    </div>
+                    <h1>Base stats :</h1>
+                    <div className="pokemon-stats-info">
+                        <h3>HP : {pokemon.hp}</h3>
+                        <h3>ATTACK : {pokemon.attack}</h3>
+                        <h3>DEFENSE : {pokemon.defense}</h3>
+                        <h3>SPEED : {pokemon.speed}</h3>
+                    </div>
+                </div>
 
             </div>
         </div>

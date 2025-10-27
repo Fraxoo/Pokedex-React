@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Headers from "../components/headers"
 import PokemonCard from "../components/pokemon-card";
-import { PokemonItem } from "../models/Pokemon";
+import { PokemonItem } from "../models/PokemonItem";
 import '../styles/home.css'
 import { Link } from "react-router-dom";
 

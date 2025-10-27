@@ -1,3 +1,97 @@
-body{
+body {
     background-color: white;
+    min-height: 100vh;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+
+}
+
+.pokemon-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3rem;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.pokemon-data-bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pokemon-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pokemon-stats-types{
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+}
+
+.pokemon-stats-types img{
+    width: 20%;
+    background-color: white;
+    border-radius: 100%;
+    padding: 1rem;
+}
+
+.pokemon-stats h1 {
+    color: white;
+}
+
+.pokemon-stats-info {
+    position: relative;
+    /* 1) indispensable */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 20px;
+    /* 3) espace pour la barre */
+    /* border-left: none; */
+    /* 5) retire l'ancienne bordure */
+}
+
+.pokemon-stats-info h3 {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pokemon-stats-info::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.3);
 }
